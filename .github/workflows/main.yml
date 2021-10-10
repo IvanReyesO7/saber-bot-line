@@ -17,8 +17,12 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
+      
+    - name: Install bundler
+      run: |
+        gem install bundler:2.2.26
         
-    - name: install dependencies
+    - name: Install dependencies
       run: |
         bundle install
 
