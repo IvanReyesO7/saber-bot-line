@@ -32,4 +32,5 @@ module Saber
   end
 end
 
-Saber::LineBot.post_message(Saber::LineMessages.morning)
+message = Saber::LineMessages.morning
+Saber::LineBot.post_message(message)

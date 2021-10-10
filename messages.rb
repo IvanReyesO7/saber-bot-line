@@ -7,8 +7,7 @@ module Saber
       message = "Buenos dias gordos! hoy es #{Date.today.strftime('%b %d, %Y')}\n"
       message += fetch_weather + "\n"
       message += "Cuidense mucho 😘"
+      return message
     end
   end
 end
-
-p Saber::LineMessages.morning
