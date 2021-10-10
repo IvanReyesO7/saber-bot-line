@@ -12,7 +12,7 @@ module Saber
       request.content_type = "application/json"
       request["Authorization"] = "Bearer {#{${{secret.CHANNEL_ACCESS_TOKEN}}}}"
       request.body = JSON.dump({
-        "to" => "#{${{secret.USER_ID}}}",
+        "to" => ${{secret.USER_ID}},
         "messages" => [
           {
             "type" => "text",
