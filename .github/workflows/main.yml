@@ -2,7 +2,7 @@ name: test_chatbot
 
 on:
   schedule:
-  - cron: '06 06 * *'
+  - cron: '07 06 * * *'
 
 jobs:
   build:
