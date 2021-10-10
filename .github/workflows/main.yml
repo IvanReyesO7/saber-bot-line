@@ -1,8 +1,7 @@
 name: test_chatbot
 
 on:
-  schedule:
-    - cron: '45 05 * * *'
+  push:
 
 jobs:
   build:
