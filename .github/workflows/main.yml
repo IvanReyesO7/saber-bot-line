@@ -1,0 +1,27 @@
+name: test_chatbot
+
+on:
+  schedule:
+    - cron: '45 13 * * *'
+
+jobs:
+  build:
+    name: Build + Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+
+    - name: run script
+      env:
+        CHANNEL_ACCESS_TOKEN: ""
+        USER_ID: ""
+      run: |
+        ruby saber.rb
