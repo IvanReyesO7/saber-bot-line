@@ -10,9 +10,9 @@ module Saber
       uri = URI.parse("https://api.line.me/v2/bot/message/push")
       request = Net::HTTP::Post.new(uri)
       request.content_type = "application/json"
-      request["Authorization"] = "Bearer {#{ENV[CHANNEL_ACCESS_TOKEN]}}"
+      request["Authorization"] = "Bearer {#{ENV["CHANNEL_ACCESS_TOKEN"]}}"
       request.body = JSON.dump({
-        "to" => ENV[USER_ID],
+        "to" => ENV["USER_ID"],
         "messages" => [
           {
             "type" => "text",
