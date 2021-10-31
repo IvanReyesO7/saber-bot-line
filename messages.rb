@@ -6,9 +6,12 @@ module Saber
     def self.morning
       message = "Buenos días gordos ☀️ \n"
       message += "hoy es #{(Date.today + 1).strftime('%b %d de %Y')}\n"
-      message += fetch_weather + "\n"
+      message += "La temperatura media será de #{fetch_weather("Tokyo")}" + "\n"
+      message += "y #{fetch_weather("Doha")}" + "\n"
       message += "Cuídense mucho 😘"
       return message
     end
   end
 end
+
+puts Saber::LineMessages.morning
