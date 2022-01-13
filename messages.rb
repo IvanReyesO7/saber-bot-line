@@ -8,6 +8,7 @@ module Saber
       message += "hoy es #{(Date.today + 1).strftime('%b %d de %Y')}\n"
       message += "La temperatura media será de #{fetch_weather("Tokyo")}" + "\n"
       message += "y #{fetch_weather("Barcelona")}" + "\n"
+      message += "y #{fetch_weather("Bogota")}" + "\n"
       message += "Cuídense mucho 😘"
       return message
     end
